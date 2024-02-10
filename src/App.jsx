@@ -1,15 +1,13 @@
-// Import necessary modules
 import React, { useState } from 'react';
 import axios from 'axios';
 
-// Define functional component for the frontend
+
 function App() {
-  // State variables to hold user input
+
   const [email, setEmail] = useState('');
   const [lastActivity, setLastActivity] = useState('');
   const [visitedCheckout, setVisitedCheckout] = useState(false);
 
-  // Function to handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -26,7 +24,7 @@ function App() {
   return (
     <div className="App text-center mt-20">
       <h1 className='text-xl font-bold mb-10'>User Activity Management</h1>
-      <div className='border border-black w-[600px] mx-auto p-4'>
+      <div className='border border-black w-[600px] mx-auto p-6 rounded-lg'>
       <form onSubmit={handleSubmit}>
         <div >
           <label  className='mr-4'>Email:</label> 
@@ -40,7 +38,7 @@ function App() {
           <label className='mr-4'>Visited Checkout:</label> 
           <input className='border border-black rounded-lg'  type="checkbox" checked={visitedCheckout} onChange={(e) => setVisitedCheckout(e.target.checked)} />
         </div>
-        <button className='bg-black text-white p-2 rounded-xl mt-5' type="submit">Update Activity</button>
+        <button className='bg-black text-white px-3 py-2 rounded-xl mt-5' type="submit">Update Activity</button>
       </form>
     </div>
     </div>
