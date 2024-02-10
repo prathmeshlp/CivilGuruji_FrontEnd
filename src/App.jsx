@@ -13,7 +13,7 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:3001/user/activity', { email, lastActivity, visitedCheckout });
+      await axios.post('https://civil-guruji-backend.vercel.app/user/activity', { email, lastActivity, visitedCheckout });
       setEmail('');
       setLastActivity('');
       setVisitedCheckout(false);
